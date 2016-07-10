@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+
+head
+	title Metadata Scanner
+	meta(char="utf-8")
+	meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+	meta(http-equiv='x-ua-compatible', content='ie=edge')
+	link(href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', rel='stylesheet')
+	// Bootstrap
+	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css', integrity='sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd', crossorigin='anonymous')
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.2/js/tether.js')
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js', integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7', crossorigin='anonymous')
+	// Custom Stylesheet
+	link(rel='stylesheet', type='text/css', href='style.css')
+	
+body
+	div.container
+		h1 Metadata Scanner
+		hr
+		.list-group
+			a.list-group-item.active(href='#')
+				h4.list-group-item-heading User Stories
+			a.list-group-item(href='#')
+				p.list-group-item-text
+				| 1. I can submit a FormData object that includes a file upload.
+			a.list-group-item(href='#')
+				p.list-group-item-text
+				| 2. When I submit something, I will receive the file size in bytes within the JSON response.
+		.flex
+			div
+				| This API uses the 
+				a(href='#') multer
+				|  package to accomplish this. Upload your file in the form below.
+			
+			form(enctype='multipart/form-data' method='post' action='/metadata')
+				fieldset.form-group
+					input.form-control-file.inline-block(type='file' name='file')
+					button.btn.btn-secondary.inline-block Submit

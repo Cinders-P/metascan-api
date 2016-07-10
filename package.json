@@ -1,0 +1,20 @@
+{
+  "name": "file-metadata",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cinders-P",
+  "license": "ISC",
+  "engines": {
+    "node": "6.3.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "multer": "^1.1.0",
+    "pug": "^2.0.0-beta3",
+    "stylus": "^0.54.5"
+  }
+}
